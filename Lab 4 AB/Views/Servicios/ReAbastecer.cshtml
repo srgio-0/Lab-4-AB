@@ -1,0 +1,38 @@
+﻿@model List<Lab_4_AB.Models.Farmaco>
+@{
+				/**/
+
+				ViewBag.Title = "ReAbastecer";
+}
+
+<h2>ReAbastecer</h2>
+
+@if (Model != null)
+{
+	<table class="table">
+		<thead>
+			<tr>
+				<th>ID</th>
+				<th>Nombre</th>
+				<th>Descripción</th>
+				<th>Casa Farmaceutica</th>
+				<th>Precio</th>
+			</tr>
+		</thead>
+		<tbody>
+			@foreach (var medicamento in Model)
+			{
+				<tr>
+					<td>@medicamento.Id</td>
+					<td>@medicamento.Nombre</td>
+					<td>@medicamento.Descripcion</td>
+					<td>@medicamento.Casa</td>
+					<td>$@medicamento.Precio</td>
+					<td>
+						<button type="button" class="btn btn-xs btn-success" onclick="location.href ='@Url.Action("ReAbastecer2","Servicios", new { @Id = medicamento.Id, @Nombre = medicamento.Nombre, @Descrip = medicamento.Descripcion, @Casa = medicamento.Casa, @Precio = medicamento.Precio, @Cant = medicamento.Cant})'">Re-Abastecer</button>
+					</td>
+				</tr>
+			}
+		</tbody>
+	</table>
+}

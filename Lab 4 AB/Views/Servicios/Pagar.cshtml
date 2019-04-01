@@ -1,0 +1,66 @@
+﻿@model List<Lab_4_AB.Models.Farmaco>
+@{
+	ViewBag.Title = "Pagar";
+}
+
+<h2>Ingrese sus Datos para Pagar</h2>
+
+<p>
+	@{
+		double total = 0;
+		foreach (var medicamento in Model)
+		{
+			total = total + medicamento.Precio;
+		}
+	}
+	<h4>El total es: $@total</h4>
+</p>
+
+@using (Html.BeginForm("Pagar", "Servicios", FormMethod.Post))
+ {
+	<did class="panel-default">
+		<div class="panel-body">
+			<div class="form-inline">
+				@Html.Label("Nombre__:")
+				@Html.TextBox("Nombre", "", new { @class = "form-control" })
+				<br />
+				@Html.Label("Direccion_:")
+				@Html.TextBox("Direccion", "", new { @class = "form-control" })
+				<br />
+				@Html.Label("NIT______:")
+				@Html.TextBox("NIT", null, new { @type = "number", @class = "form-control" })
+				<div style="display:none">
+					@Html.TextBox("Total", total, new { @type = "number", @class = "form-control" })
+				</div>
+				<button type="submit" class="btn btn-success btn-block">Comprar</button>
+			</div>
+		</div>
+	</did>
+ }
+
+<br />
+<h3>Sus Productos</h3>
+
+<table class="table">
+	<thead>
+		<tr>
+			<th>Id</th>
+			<th>Nombre</th>
+			<th>Descripción</th>
+			<th>Casa Farmaceutica</th>
+			<th>Precio</th>
+		</tr>
+	</thead>
+	<tbody>
+		@foreach (var medicamento in Model)
+		{
+			<tr>
+				<td>@medicamento.Id</td>
+				<td>@medicamento.Nombre</td>
+				<td>@medicamento.Descripcion</td>
+				<td>@medicamento.Casa</td>
+				<td>$@medicamento.Precio</td>
+			</tr>
+		}
+	</tbody>
+</table>

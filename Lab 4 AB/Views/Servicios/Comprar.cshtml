@@ -1,0 +1,44 @@
+﻿@model List<Lab_4_AB.Models.Farmaco>
+@{
+	ViewBag.Title = "Comprar";
+}
+<h4>Ingrese nombre producto</h4>
+<br />
+<form action="/Servicios/Comprar" method="post">
+	<input type="text" id="cadena" name="cadena" />
+	<input type="submit" value="Buscar" />
+</form>
+
+@if (Model != null)
+{
+	<table class="table">
+		<thead>
+			<tr>
+				<th>ID</th>
+				<th>Nombre</th>
+				<th>Descripción</th>
+				<th>Casa Farmaceutica</th>
+				<th>Precio</th>
+				<th>No. Existencias</th>
+				<th style="width:100px;">Añadir a Carrito</th>
+			</tr>
+		</thead>
+		<tbody>
+			@foreach (var medicamento in Model)
+			{
+				<tr>
+					<td>@medicamento.Id</td>
+					<td>@medicamento.Nombre</td>
+					<td>@medicamento.Descripcion</td>
+					<td>@medicamento.Casa</td>
+					<td>$@medicamento.Precio</td>
+					<td>@medicamento.Cant</td>
+					<td>
+						<button type="button" class="btn btn-xs btn-success" onclick="location.href ='@Url.Action("AñadirProducto","Servicios", new { @Id = medicamento.Id, @Nombre = medicamento.Nombre, @Descrip = medicamento.Descripcion, @Casa = medicamento.Casa, @Precio = medicamento.Precio, @Cant = medicamento.Cant})'">Añadir</button>
+					</td>
+				</tr>
+			}
+		</tbody>
+	</table>
+}
+

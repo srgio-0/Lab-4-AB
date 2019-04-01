@@ -1,0 +1,16 @@
+﻿
+@{
+	ViewBag.Title = "Index";
+}
+<p style ="color:red;">
+	<h1>
+		@ViewBag.Message
+	</h1>
+</p>
+<h3>Ingrese el grado del arbol (grado > 1)</h3>
+<h6>No debe ser un numero decimal</h6>
+
+<form action="/Servicios/Index" method="post">
+	<input type="number" id="grado" name="grado"/>
+	<input type="submit" value="Enviar" />
+</form>

@@ -1,0 +1,28 @@
+﻿@model List<Lab_4_AB.Models.Pedidos>
+@{
+    ViewBag.Title = "VerPedidos";
+}
+<h2>Pedidos</h2>
+
+<table class="table">
+	<thead>
+		<tr>
+			<th>Nombre</th>
+			<th>Direccion</th>
+			<th>NIT</th>
+			<th>Total</th>
+		</tr>
+	</thead>
+	<tbody>
+		@foreach (var medicamento in Model)
+		{
+			<tr>
+				<td>@medicamento.Nombre</td>
+				<td>@medicamento.Direccion</td>
+				<td>@medicamento.NIT</td>
+				<td>@medicamento.Total</td>
+			</tr>
+		}
+	</tbody>
+</table>
+

@@ -1,0 +1,16 @@
+﻿@model List<Lab_4_AB.Models.Farmaco>
+@{
+	ViewBag.Title = "Recorrido";
+}
+
+<h2>Recorrido</h2>
+
+<table style="width:100%">
+	@foreach (var medicamento in Model)
+	{
+		<tr>
+			<td>@medicamento.Id</td>
+			<td>@medicamento.Nombre</td>
+		</tr>
+	}
+</table>

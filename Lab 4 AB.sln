@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.271
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab 4 AB", "Lab 4 AB\Lab 4 AB.csproj", "{29B1B04E-D31E-4B63-8F0F-68BCB6F58562}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BArbol", "BArbol\BArbol.csproj", "{317BA18D-A521-4651-8B55-96EA2A2DEDE0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{29B1B04E-D31E-4B63-8F0F-68BCB6F58562}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{29B1B04E-D31E-4B63-8F0F-68BCB6F58562}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{29B1B04E-D31E-4B63-8F0F-68BCB6F58562}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{29B1B04E-D31E-4B63-8F0F-68BCB6F58562}.Release|Any CPU.Build.0 = Release|Any CPU
+		{317BA18D-A521-4651-8B55-96EA2A2DEDE0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{317BA18D-A521-4651-8B55-96EA2A2DEDE0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{317BA18D-A521-4651-8B55-96EA2A2DEDE0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{317BA18D-A521-4651-8B55-96EA2A2DEDE0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0678853B-AB8C-4AF9-B329-A161DBD4AD35}
+	EndGlobalSection
+EndGlobal
