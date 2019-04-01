@@ -29,7 +29,7 @@ namespace BArbol
 		{
 			return medicamento;
 		}
-		public void setLibro(Medicamento medicamento)
+		public void setMedicamento(Medicamento medicamento)
 		{
 			this.medicamento = medicamento;
 		}

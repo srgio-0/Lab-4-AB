@@ -20,7 +20,7 @@ namespace BArbol
 		{
 			return id;
 		}
-		public string getTitulo()
+		public string getNombre()
 		{
 			return Nombre;
 		}

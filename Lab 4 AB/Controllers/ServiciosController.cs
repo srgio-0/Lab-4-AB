@@ -5,6 +5,7 @@ using System.Web;
 using System.IO;
 using System.Web.Mvc;
 using BArbol;
+using System.Xml.Serialization;
 using Lab_4_AB.Models;
 
 namespace Lab_4_AB.Controllers
@@ -150,7 +151,13 @@ namespace Lab_4_AB.Controllers
 				}
 
 			}
-
+			StreamWriter archivo = new StreamWriter(@"C:/Users/Sergio Daniel/Documents/json.json");
+			XmlSerializer Serializar = new XmlSerializer(typeof(Farmaco));
+			foreach (var item in tmp)
+			{
+				Farmaco tmpjs = item;
+				Serializar.Serialize(archivo, tmpjs);
+			}
 			return View(tmp);
 		}
 	}

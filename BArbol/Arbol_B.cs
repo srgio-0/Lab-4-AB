@@ -156,7 +156,7 @@ namespace BArbol
 			{
 				for (int i = 0; i < actual.getUsados(); i++)
 				{
-					if (actual.getMedicamento(i).getTitulo() == nombre)
+					if (actual.getMedicamento(i).getNombre() == nombre)
 						temporal.insertar(actual.getMedicamento(i));
 				}
 
